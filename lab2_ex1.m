@@ -3,8 +3,8 @@ clear all
 disp('EX 3.1-3.2');
     disp('~~~~~~~~~~~~~~~~~~~~~~~~~~~');
     n=10;
-    a_i=2;
-    b_i=1;
+    a_i=1;
+    b_i=2;
     A = full(gallery('tridiag',n,-a_i,4,-b_i));
     b=sum(A,2);
 
@@ -38,7 +38,7 @@ disp('EX 3.1-3.2');
         disp('idiotimes');
         x=eig(B);     %disp(x);
         rB=max(abs(x));
-    %omega=2.0/(1.0+sqrt(1-rB*rB));
+    omega=2.0/(1.0+sqrt(1-rB*rB));
     
     disp('rB - fasmatikh aktina'); disp(rB);
     
@@ -72,7 +72,6 @@ for omega = 0.1:0.1:1.9
     end
     %disp('x1'); disp(x1);
     disp('~~~~~~~~~~~~~~~~~~~~~~~~~~~');
-    
     loop = loop + 1;
     %clear all
 end
